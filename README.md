@@ -11,22 +11,6 @@ Ultimately, when we launch the audit, this repo will be made public and will con
 Some of the checklists in this doc are for **C4 (🐺)** and some of them are for **you as the audit sponsor (⭐️)**.
 
 ---
-
-# Audit setup
-
-## 🐺 C4: Set up repos
-- [ ] Create a new private repo named `YYYY-MM-sponsorname` using this repo as a template.
-- [ ] Rename this repo to reflect audit date (if applicable)
-- [ ] Rename auditt H1 below
-- [ ] Update pot sizes
-- [ ] Fill in start and end times in audit bullets below
-- [ ] Add link to submission form in audit details below
-- [ ] Add the information from the scoping form to the "Scoping Details" section at the bottom of this readme.
-- [ ] Add matching info to the Code4rena site
-- [ ] Add sponsor to this private repo with 'maintain' level access.
-- [ ] Send the sponsor contact the url for this repo to follow the instructions below and add contracts here. 
-- [ ] Delete this checklist.
-
 # Repo setup
 
 ## ⭐️ Sponsor: Add code to this repo
@@ -62,22 +46,21 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 
 ---
 
-# Sponsorname audit details
-- Total Prize Pool: XXX XXX USDC (Notion: Total award pool)
-  - HM awards: XXX XXX USDC (Notion: HM (main) pool)
-  - Analysis awards: XXX XXX USDC (Notion: Analysis pool)
-  - QA awards: XXX XXX USDC (Notion: QA pool)
-  - Bot Race awards: XXX XXX USDC (Notion: Bot Race pool)
-  - Gas awards: XXX XXX USDC (Notion: Gas pool)
-  - Judge awards: XXX XXX USDC (Notion: Judge Fee)
-  - Lookout awards: XXX XXX USDC (Notion: Sum of Pre-sort fee + Pre-sort early bonus)
-  - Scout awards: $500 USDC (Notion: Scout fee - but usually $500 USDC)
-  - (this line can be removed if there is no mitigation) Mitigation Review: XXX XXX USDC (*Opportunity goes to top 3 certified wardens based on placement in this audit.*)
+# Amphora Protocol audit details
+- Total Prize Pool: $65,500 USDC 
+  - HM awards: $46,250 USDC 
+  - Analysis awards: $2,500 USDC 
+  - QA awards: $1,250 USDC 
+  - Bot Race awards: $3,750 USDC 
+  - Gas awards: $1,250 USDC 
+  - Judge awards: XXX XXX USDC 
+  - Lookout awards: XXX XXX USDC 
+  - Scout awards: $500 USDC 
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/YYYY-MM-AuditName/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2023-07-amphora/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts TBD XXX XXX XX 20:00 UTC (ex. `Starts March 22, 2023 20:00 UTC`)
-- Ends TBD XXX XXX XX 20:00 UTC (ex. `Ends March 30, 2023 20:00 UTC`)
+- Starts July 11, 2023 20:00 UTC
+- Ends July 17, 2023 20:00 UTC 
 
 ## Automated Findings / Publicly Known Issues
 
@@ -113,22 +96,23 @@ Automated findings output for the audit can be found [here](add link to report) 
 
 ## Scoping Details 
 ```
-- If you have a public code repo, please share it here:  
-- How many contracts are in scope?:   
-- Total SLoC for these contracts?:  
-- How many external imports are there?:  
-- How many separate interfaces and struct definitions are there for the contracts within scope?:  
-- Does most of your code generally use composition or inheritance?:   
-- How many external calls?:   
-- What is the overall line coverage percentage provided by your tests?:
-- Is this an upgrade of an existing system?:
-- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): 
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   
-- Please describe required context:   
-- Does it use an oracle?:  
-- Describe any novel or unique curve logic or mathematical models your code uses: 
-- Is this either a fork of or an alternate implementation of another project?:   
-- Does it use a side-chain?:
+- If you have a public code repo, please share it here: https://github.com/AmphoraProtocol/core 
+- How many contracts are in scope?:   57
+- Total SLoC for these contracts?:  2401
+- How many external imports are there?: 15 
+- How many separate interfaces and struct definitions are there for the contracts within scope?:  24
+- Does most of your code generally use composition or inheritance?:  Composition
+- How many external calls?:   8
+- What is the overall line coverage percentage provided by your tests?: 90%
+- Is this an upgrade of an existing system?: True; We took the Interest Protocol and made it so vaults can deposit Convex LP positions as collateral, which are automatically deposited into Convex, and share rewards back to the user and the protocol. We also upgraded the oracle system.
+- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): ERC-20 Token
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: False  
+- Please describe required context:   n/a
+- Does it use an oracle?:  Others; Uses both Chainlink, Curve and Uniswap V3 as Oracles, has interna
+- Describe any novel or unique curve logic or mathematical models your code uses: Yes
+- Is this either a fork of or an alternate implementation of another project?:   True
+- Does it use a side-chain?: False
+- Fresh or audited code: Protocol we forked was previously audit, this code has not been
 - Describe any specific areas you would like addressed:
 ```
 
