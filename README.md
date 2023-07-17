@@ -53,8 +53,8 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
   - QA awards: $1,250 USDC 
   - Bot Race awards: $3,750 USDC 
   - Gas awards: $1,250 USDC 
-  - Judge awards: XXX XXX USDC 
-  - Lookout awards: XXX XXX USDC 
+  - Judge awards: $6,000 USDC 
+  - Lookout awards: $4,000 USDC 
   - Scout awards: $500 USDC 
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-07-amphora/submit)
