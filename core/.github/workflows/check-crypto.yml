@@ -1,0 +1,21 @@
+name: Check crypto
+
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+
+jobs:
+  check-crypto:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check for private keys
+        if: github.repository == 'defi-wonderland/amphora-core-private'
+        uses: defi-wonderland/check-crypto-action@v1
+        with:
+          title: Check private key and notify
+          branch: dev
+          notify_check: true
+          token: ${{ secrets.GITHUB_TOKEN }}

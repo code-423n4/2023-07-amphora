@@ -1,0 +1,46 @@
+on: [push]
+
+name: test
+
+concurrency:
+  group: ${{github.workflow}}-${{github.ref}}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Foundry project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --network-concurrency 1
+
+      - name: Compile
+        run: forge build
+
+      - name: Run unit tests
+        run: yarn test:unit
+
+      - name: "Run invariant tests"
+        run: yarn test:invariant
+
+      - name: "Create env file"
+        run: |
+          touch .env
+          echo MAINNET_RPC="${{ secrets.MAINNET_RPC }}" >> .env
+          echo FOUNDRY_FUZZ_RUNS=1 >> .env
+          cat .env
+
+      - name: Run E2E tests
+        run: yarn test:e2e

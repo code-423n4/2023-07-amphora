@@ -1,0 +1,71 @@
+{
+  "name": "@amphora-protocol/core",
+  "version": "1.0.2",
+  "private": true,
+  "description": "",
+  "homepage": "https://github.com/AmphoraProtocol/core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmphoraProtocol/core.git"
+  },
+  "license": "AGPL-3.0-only",
+  "author": "Wonderland",
+  "scripts": {
+    "build": "forge build && node interfaces-exporter.js",
+    "coverage": "forge coverage --match-contract Unit",
+    "deploy:goerli": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --rpc-url $GOERLI_RPC solidity/scripts/DeployGoerli.s.sol:DeployGoerli",
+    "deploy:goerliOpen": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --rpc-url $GOERLI_RPC solidity/scripts/DeployGoerli.s.sol:DeployGoerliOpenDeployment",
+    "deploy:local": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --fork-url http://localhost:8545 solidity/scripts/DeployLocal.s.sol:DeployLocal",
+    "deploy:mainnet": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --rpc-url $MAINNET_RPC solidity/scripts/DeployMainnet.s.sol:DeployMainnet",
+    "deploy:sepolia": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --rpc-url $SEPOLIA_RPC solidity/scripts/DeploySepolia.s.sol:DeploySepolia",
+    "docs:build": "./build-docs.sh",
+    "docs:run": "mdbook serve docs",
+    "postinstall": "husky install",
+    "lint:check": "yarn lint:sol-tests && yarn lint:sol-logic && forge fmt check",
+    "lint:fix": "sort-package-json && forge fmt && yarn lint:sol-tests --fix && yarn lint:sol-logic --fix",
+    "lint:sol-logic": "cross-env solhint -c .solhint.json 'solidity/contracts/**/*.sol' 'solidity/interfaces/**/*.sol'",
+    "lint:sol-tests": "cross-env solhint 'solidity/test/**/*.sol'",
+    "prepare": "husky install && wonderland-crypto-husky-checks install",
+    "scripts:borrow": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --fork-url http://localhost:8545 solidity/scripts/DepositAndBorrow.s.sol:Borrow",
+    "scripts:deposit": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --fork-url http://localhost:8545 solidity/scripts/DepositAndBorrow.s.sol:MintVaultAndDeposit",
+    "scripts:registerToken": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --fork-url http://localhost:8545 solidity/scripts/RegisterToken.s.sol:RegisterToken",
+    "test": "yarn test:unit && yarn test:e2e",
+    "test:e2e": "forge test --match-contract E2E -vvv",
+    "test:gas": "forge test --match-contract E2E -vvv --gas-report",
+    "test:invariant": "forge test --match-contract Invariant -vvv",
+    "test:unit": "forge test --match-contract Unit -vvv"
+  },
+  "lint-staged": {
+    "*.{js,css,md,ts,sol}": "forge fmt",
+    "*.sol": "cross-env solhint --fix 'solidity/**/*.sol",
+    "package.json": "sort-package-json"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "0.6.1",
+    "@defi-wonderland/isolmate": "https://github.com/defi-wonderland/isolmate.git#59e18043c2450fef550f1744b3705ce9ebcaf1c8",
+    "@defi-wonderland/solidity-utils": "0.0.0-6c86c0fc",
+    "@openzeppelin/contracts": "4.8.2",
+    "@openzeppelin/contracts-upgradeable": "4.8.1",
+    "@uniswap/v2-periphery": "https://github.com/Uniswap/v2-periphery.git#0335e8f7e1bd1e8d8329fd300aea2ef2f36dd19f",
+    "@uniswap/v3-core": "https://github.com/defi-wonderland/uniswap-v3-core.git#00c65edac6862bb0ddfbfd6554d20f259bc9f735",
+    "@uniswap/v3-periphery": "https://github.com/defi-wonderland/uniswap-v3-periphery.git#33df3d7265aee0d0eb537df06ce1c884b1ccd7a0",
+    "ds-test": "https://github.com/dapphub/ds-test.git#9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+    "forge-std": "https://github.com/foundry-rs/forge-std.git#2b58ecbcf3dfde7a75959dc7b4eb3d0670278de6",
+    "solady": "0.0.85"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.0.3",
+    "@commitlint/config-conventional": "17.0.3",
+    "@defi-wonderland/crypto-husky-checks": "0.0.0-29a10090",
+    "@typechain/ethers-v5": "10.2.0",
+    "@typechain/truffle-v5": "8.0.2",
+    "@typechain/web3-v1": "6.0.2",
+    "cross-env": "7.0.3",
+    "husky": "8.0.2",
+    "lint-staged": "10",
+    "solhint": "3.3.6",
+    "solhint-plugin-defi-wonderland": "1.1.0",
+    "sort-package-json": "2.4.1",
+    "typechain": "8.1.1"
+  }
+}
