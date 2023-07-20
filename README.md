@@ -98,7 +98,7 @@ The aim of this curve model is to allow lending to work efficiently up to a frac
 ```
 - If you have a public code repo, please share it here: https://github.com/AmphoraProtocol/core 
 - How many contracts are in scope?:   57
-- Total SLoC for these contracts?:  2401
+- Total SLoC for these contracts?:  2261
 - How many external imports are there?: 15 
 - How many separate interfaces and struct definitions are there for the contracts within scope?:  24
 - Does most of your code generally use composition or inheritance?:  Composition
