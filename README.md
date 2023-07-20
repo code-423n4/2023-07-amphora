@@ -77,6 +77,8 @@ https://docs.amphorafinance.com/
 
 ## Out of scope
 
+-/core/.husky
+-/core/docs/
 -core/scripts/fakes/
 -core/tests/
 -core/scripts -- Primarily not within scope, but if you come across configuration issues during use, the team may be willing to provide additional $AMPH bounties for flagging it.
