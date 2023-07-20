@@ -103,3 +103,32 @@ dist
 
 # TernJS port file
 .tern-port
+
+# General
+yarn-error.log
+node_modules
+.DS_STORE
+
+# Foundry files
+cache/
+out/
+
+# Config files
+.env
+
+# Avoid ignoring gitkeep
+!/**/.gitkeep
+
+# Ignore the deployment files
+broadcast/*/*/*
+
+# Coverage
+lcov.info
+report
+
+# Docs build files
+docs/book
+docs/src/solidity/*
+
+# Npm generated files
+npm
