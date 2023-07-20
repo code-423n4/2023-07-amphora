@@ -38,34 +38,35 @@ https://docs.amphorafinance.com/
 
 # Scope
 
-|Contract|SLOC|
-|[VaultController.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/VaultController.sol)|535|
-|[GovernorCharlie.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/governance/GovernorCharlie.sol)|419|
-|[Vault.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/Vault.sol)|211|
-|[USDA.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/USDA.sol)|162|
-|[UFragments.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/utils/UFragments.sol)|151|
-|[AMPHClaimer.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/AMPHClaimer.sol)|134|
-|[WUSDA.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/WUSDA.sol)|99|
-|[AnchoredViewRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/AnchoredViewRelay.sol)|48|
-|[ThreeLines0_100.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/utils/ThreeLines0_100.sol)|46|
-|[UniswapV3OracleRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/UniswapV3OracleRelay.sol)|43|
-|[CbEthEthOracle.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/CbEthEthOracle.sol)|41|
-|[ChainlinkOracleRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/ChainlinkOracleRelay.sol)|40|
-|[StableCurveLpOracle.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/StableCurveLpOracle.sol)|38|
-|[TriCrypto2Oracle.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/TriCrypto2Oracle.sol)|35|
-|[GovernanceStructs.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/utils/GovernanceStructs.sol)|35|
-|[CurveMaster.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/CurveMaster.sol)|31|
-|[CTokenOracle.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/CTokenOracle.sol)|31|
-|[EthSafeStableCurveOracle.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/EthSafeStableCurveOracle.sol)|29|
-|[ChainlinkTokenOracleRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/ChainlinkTokenOracleRelay.sol)|26|
-|[WstEthOracle.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/WstEthOracle.sol)|19|
-|[UniswapV3TokenOracleRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/UniswapV3TokenOracleRelay.sol)|18|
-|[AmphoraProtocolToken.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/governance/AmphoraProtocolToken.sol)|17|
-|[OracleRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/OracleRelay.sol)|17|
-|[VaultDeployer.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/VaultDeployer.sol)|16|
-|[ChainlinkStalePriceLib.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/ChainlinkStalePriceLib.sol)|10|
-|[CurveRegistryUtils.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/CurveRegistryUtils.sol)|10|
-|SUM:|2261|
+Contract                                                                                                                                                         | SLOC
+---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----
+[VaultController.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/VaultController.sol)                                  | 535 
+[GovernorCharlie.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/governance/GovernorCharlie.sol)                            | 419 
+[Vault.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/Vault.sol)                                                      | 211 
+[USDA.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/USDA.sol)                                                        | 162 
+[UFragments.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/utils/UFragments.sol)                                           | 151 
+[AMPHClaimer.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/AMPHClaimer.sol)                                          | 134 
+[WUSDA.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/WUSDA.sol)                                                      | 99  
+[AnchoredViewRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/AnchoredViewRelay.sol)                 | 48  
+[ThreeLines0_100.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/utils/ThreeLines0_100.sol)                                 | 46  
+[UniswapV3OracleRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/UniswapV3OracleRelay.sol)           | 43  
+[CbEthEthOracle.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/CbEthEthOracle.sol)                       | 41  
+[ChainlinkOracleRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/ChainlinkOracleRelay.sol)           | 40  
+[StableCurveLpOracle.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/StableCurveLpOracle.sol)             | 38  
+[TriCrypto2Oracle.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/TriCrypto2Oracle.sol)                   | 35  
+[GovernanceStructs.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/utils/GovernanceStructs.sol)                             | 35  
+[CurveMaster.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/CurveMaster.sol)                                     | 31  
+[CTokenOracle.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/CTokenOracle.sol)                           | 31  
+[EthSafeStableCurveOracle.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/EthSafeStableCurveOracle.sol)   | 29  
+[ChainlinkTokenOracleRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/ChainlinkTokenOracleRelay.sol) | 26  
+[WstEthOracle.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/WstEthOracle.sol)                           | 19  
+[UniswapV3TokenOracleRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/UniswapV3TokenOracleRelay.sol) | 18  
+[AmphoraProtocolToken.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/governance/AmphoraProtocolToken.sol)                  | 17  
+[OracleRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/OracleRelay.sol)                             | 17  
+[VaultDeployer.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/VaultDeployer.sol)                                      | 16  
+[ChainlinkStalePriceLib.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/ChainlinkStalePriceLib.sol)       | 10  
+[CurveRegistryUtils.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/CurveRegistryUtils.sol)               | 10  
+SUM:                                                                                                                                                             | 2261
 
 ## Out of scope
 
@@ -118,6 +119,6 @@ The aim of this curve model is to allow lending to work efficiently up to a frac
 
 # Tests
 
-Full test instructions and documentation can be found in /core/README.md 
+Full test instructions and documentation can be found in [/core/README.md](https://github.com/code-423n4/2023-07-amphora/tree/main/core#code-coverage-unit-tests) 
 
-We use Foundry/Forge for our local testing, and it is important to note `forge coverage` will result in a `stack too deep error` due to Governor Charlie contract. A detailed work around is provided in the /core/README.md
+We use Foundry/Forge for our local testing, and it is important to note `forge coverage` will result in a `stack too deep error` due to Governor Charlie contract. A detailed work around is provided in the [/core/README.md](https://github.com/code-423n4/2023-07-amphora/tree/main/core#code-coverage-unit-tests) 
