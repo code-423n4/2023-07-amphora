@@ -37,7 +37,7 @@ The protocol takes a small fee of the CRV and CVX rewards and in exchange rewars
 https://docs.amphorafinance.com/
 
 # Scope
-
+```
 ├── solidity: All our contracts and interfaces are here
 │   ├─── contracts/: All the contracts
 │   │    ├─── core/: All core contracts
@@ -74,14 +74,17 @@ https://docs.amphorafinance.com/
 │   │    │   ├─── AmphoraProtocolToken.sol : Protocol governance token
 │   │    │   └─── GovernorCharlie.sol : Governance contract of the protocol
 │   ├─── interfaces/: The interfaces of all the contracts (SAME STRUCTURE WITH CONTRACTS)
+```
 
 ## Out of scope
 
+```
 -/core/.husky
 -/core/docs/
 -core/scripts/fakes/
 -core/tests/
 -core/scripts -- Primarily not within scope, but if you come across configuration issues during use, the team may be willing to provide additional $AMPH bounties for flagging it.
+```
 
 # Additional Context
 
@@ -89,15 +92,18 @@ Amphora's core is based on a fork of the "Interest Protocol" by Gfx Labs. They u
 
 The Interest Protocol rate parameters are as follows:
 
+```
 1st kink (s1): 25%
 2nd kink (s2): 50%
 1st kink rate (r1): 0.5%
 2nd kink rate (r2): 10%
 Max rate (r3): 200%
+```
 
 The aim of this curve model is to allow lending to work efficiently up to a fractional reserve when needed.
 
 ## Scoping Details 
+
 ```
 - If you have a public code repo, please share it here: https://github.com/AmphoraProtocol/core 
 - How many contracts are in scope?:   57
