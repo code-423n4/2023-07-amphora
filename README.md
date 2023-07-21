@@ -36,14 +36,14 @@ https://docs.amphorafinance.com/
 
 # Scope
 
-Contract                                                                                                                                                         | SLOC
+Contracts and Interfaces                                                                                                                                         | SLOC
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----
 [VaultController.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/VaultController.sol)                                  | 535 
-[GovernorCharlie.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/governance/GovernorCharlie.sol)                            | 419 
-[Vault.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/Vault.sol)                                                      | 211 
-[USDA.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/USDA.sol)                                                        | 162 
+[GovernorCharlie.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/governance/GovernorCharlie.sol)                            | 419  
+[Vault.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/Vault.sol)                                                      | 211
+[USDA.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/USDA.sol)                                                        | 162
 [UFragments.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/utils/UFragments.sol)                                           | 151 
-[AMPHClaimer.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/AMPHClaimer.sol)                                          | 134 
+[AMPHClaimer.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/AMPHClaimer.sol)                                          | 134
 [WUSDA.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/WUSDA.sol)                                                      | 99  
 [AnchoredViewRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/AnchoredViewRelay.sol)                 | 48  
 [ThreeLines0_100.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/utils/ThreeLines0_100.sol)                                 | 46  
@@ -63,8 +63,31 @@ Contract                                                                        
 [OracleRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/OracleRelay.sol)                             | 17  
 [VaultDeployer.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/core/VaultDeployer.sol)                                      | 16  
 [ChainlinkStalePriceLib.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/ChainlinkStalePriceLib.sol)       | 10  
-[CurveRegistryUtils.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/CurveRegistryUtils.sol)               | 10  
-SUM:                                                                                                                                                             | 2261
+[CurveRegistryUtils.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/contracts/periphery/oracles/CurveRegistryUtils.sol)               | 10
+[IVaultController.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/core/IVaultController.sol)                               | 184
+[IGovernorCharlie.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/governance/IGovernorCharlie.sol)                         | 102
+[IVault.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/core/IVault.sol)                                                   | 49
+[IUSDA.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/core/IUSDA.sol)                                                     | 45
+[IAMPHClaimer.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/core/IAMPHClaimer.sol)                                       | 37
+[ICurvePool.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/utils/ICurvePool.sol)                                          | 29
+[IWUSDA.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/core/IWUSDA.sol)                                                   | 24
+[IBaseRewardPool.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/utils/IBaseRewardPool.sol)                                | 15
+[ICurveMaster.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/periphery/ICurveMaster.sol)                                  | 14
+[IBooster.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/utils/IBooster.sol)                                              | 14
+[IOracleRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/periphery/IOracleRelay.sol)                                  | 13
+[IVaultDeployer.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/core/IVaultDeployer.sol)                                   | 10
+[IVirtualBalanceRewardPool.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/utils/IVirtualBalanceRewardPool.sol)            | 8
+[IAmphoraProtocolToken.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/governance/IAmphoraProtocolToken.sol)               | 7
+[ICurveAddressProvider.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/periphery/ICurveAddressesProvider.sol)              | 7
+[ICVX.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/utils/ICVX.sol)                                                      | 7
+[ICToken.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/periphery/ICToken.sol)                                            | 6
+[IAMPH.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/governance/IAMPH.sol)                                               | 5
+[IRoles.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/utils/IRoles.sol)                                                  | 5
+[IWstETH.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/utils/IWStETH.sol)                                                | 5
+[IAnchoredViewRelay](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/periphery/IAnchoredViewRelay.sol)                          | 4
+[IChainlinkOracleRelay.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/periphery/IChainlinkOracleRelay.sol)                | 4
+[ICurveSlave.sol](https://github.com/code-423n4/2023-07-amphora/blob/main/core/solidity/interfaces/utils/ICurveSlave.sol)                                        | 4
+SUM:                                                                                                                                                             | 2489
 
 ## Out of scope
 
