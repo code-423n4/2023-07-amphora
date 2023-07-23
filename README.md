@@ -32,7 +32,7 @@ Curve LP tokens are deposited into their relative pools on Convex, so that users
 
 The protocol takes a small fee of the CRV and CVX rewards and in exchange rewars the user with $AMPH the protocols governance token.
 
-https://docs.amphorafinance.com/
+https://amphora-protocol.gitbook.io/amphora-protocol
 
 # Scope
 
