@@ -1,0 +1,763 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q3-2023 / amphora-jul21
+==============================================================
+
+[07/20/2023 17:28] kartoonjoy (pinned)
+👋 Hello and welcome to the audit channel for the $65,500 **Amphora Protocol** audit!
+
+📆 Audit opens 07/21/2023 20:00 (20:00 UTC) and runs through 07/26/2023 20:00 (20:00 UTC) (5 days).
+
+Please give a warm welcome to the Amphora Protocol team, particularly @adamscochran, who will be available for questions either here in the channel or via DM in the ET timezone(s).
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/contests/2023-07-amphora-protocol#top
+
+{Embed}
+https://code4rena.com/contests/2023-07-amphora-protocol
+Code4rena
+Code4rena is a competitive audit platform that finds more high-severity vulnerabilities, more quickly than any other auditing method.
+Code4rena - ARCHIVE-Q3-2023 - amphora-jul21 [1131309270948904970].txt_Files/c4-og-banner-13F7C.png
+
+{Reactions}
+🏺 (3) ❤️ (4) 
+
+[07/20/2023 17:28] kartoonjoy
+Pinned a message.
+
+
+[07/21/2023 22:20] 0k_sec
+hello. hope we can secure this protocol together
+
+
+[07/21/2023 22:20] 0k_sec
+can the team provide details in the SCOPE section in the contest, this way we have an idea what contracts are about.
+
+
+[07/21/2023 22:22] tofunmi
+the scope is on the contest page
+
+
+[07/21/2023 22:33] 0k_sec
+true, my bad didn't focused on this, thanks ser 🙂
+
+
+[07/22/2023 03:03] banditx0x
+How come a 2400 LOC audit is only 5 days?
+
+
+[07/22/2023 06:34] ljmanini
+@adamscochran on what chains is amphora going to be deployed?
+
+{Reactions}
+👆 
+
+[07/22/2023 07:42] alymurtazamemon
+@adamscochran sent you a friend request.
+
+
+[07/22/2023 07:57] 0xanah
+There is no link to the automated findings on the github page
+
+
+[07/22/2023 07:58] alymurtazamemon
+Will be available after 24 hours of contest start time.
+
+
+[07/22/2023 08:02] 0xanah
+ok
+
+
+[07/22/2023 11:05] josephdara
+Hi @adamscochran, I sent a friend request
+
+
+[07/22/2023 11:26] bean.eth2
+hi @adamscochran ; just wondering why a vault could simply call modifyTotalDeposited directly? seems not associated with any token transfer
+
+
+[07/22/2023 12:31] sanket.kogekar
+What command are you guys using to run unit tests? Say I want to run the test function `testWstEthOracle()`. Anyone can answer.
+
+
+[07/22/2023 13:12] alymurtazamemon
+`forge test --mt testWstEthOracle`
+
+{Reactions}
+👍 
+
+[07/22/2023 13:12] alymurtazamemon
+also for some tests you need the MAINNET_RPC make sure to add it in the .env file.
+
+
+[07/22/2023 13:37] thebrittfactor (pinned)
+**Wardens** - please note that the automated findings output (AKA the winning bot race report 🏆, submitted by @DadeKuma) is posted below.
+
+These are considered publicly known issues and are not eligible for awards.
+
+🤖 **Automated findings:** 
+https://gist.github.com/thebrittfactor/0cfcacbd1366b927c268d0c41b86781b
+
+📄 **Code4rena submission guidelines and automated findings policy:** 
+https://docs.code4rena.com/roles/wardens/submission-policy#automated-findings-ineligible
+
+The above link will also be added to the contest README shortly.
+
+
+[07/22/2023 13:53] adamscochran
+It’ll be on mainnet
+
+{Reactions}
+👍 
+
+[07/22/2023 13:55] itsmetechjay
+Pinned a message.
+
+
+[07/22/2023 13:58] adamscochran
+Not entirely sure what you mean? They are calling that function, but the function is in the VaultController?
+
+The reason to keep it in the vaultController rather than a vault is that we deem the Vault Controller to be the true source of legitimate vaults, and the core piece that is migratable to new versions.
+
+Let me know if I am missing the point of your question though!
+
+
+[07/22/2023 15:08] sanket.kogekar
+Thanks! @alymurtazamemon
+
+{Reactions}
+👍 
+
+[07/22/2023 16:06] alymurtazamemon
+@thebrittfactor | C4 Sent you a message, please check Thanks.
+
+
+[07/22/2023 16:37] vielite
+i submitted a report to with the c4 form but i had not done a proper documentation on my or as i thought i should is there anyway it could be resolved?
+
+
+[07/22/2023 16:54] alymurtazamemon
+you can edit your report
+
+
+[07/22/2023 16:55] alymurtazamemon
+if there is any time left in the contest
+
+{Reactions}
+💯 
+
+[07/22/2023 17:46] itsmetechjay
+She is out of the office until Wednesday - if you have a question, the help desk is most likely your best bet: https://code4rena.com/help
+
+{Reactions}
+👍 thankyou 
+
+[07/22/2023 17:54] 0xarshia
+is findings that are kinda same generally with bot finding but the scenario is different and shows some extra impact count on contests?
+
+
+[07/22/2023 17:56] vielite
+I'm not sure how to do that , i just submitted my issue with the /help forum where should i expect a reply?
+
+
+[07/22/2023 17:57] alymurtazamemon
+issue in the help forum?
+
+
+[07/22/2023 17:58] alymurtazamemon
+I though you were talking about contest report (GAS or QA)
+
+
+[07/22/2023 18:01] 0xarshia
+Do you guys have any data on that i was plugged off a bit from c4
+
+
+[07/22/2023 18:04] vielite
+can i dm ?
+
+
+[07/22/2023 18:05] alymurtazamemon
+yes
+
+
+[07/22/2023 18:08] adamscochran
+I think it would depend on the type of impact and scale of it. Like if it’s a gas thing probably not, but if it’s a critical issue, not accurately captured by the bot finding, then maybe?
+
+{Reactions}
+thankyou (2) 
+
+[07/22/2023 18:18] 0xepley
+is there any previous audit also is this fork of some?
+
+
+[07/22/2023 18:19] maugzeth
+This project builds off  Interest Protocol (IP)  project which has been audited.
+
+
+[07/22/2023 18:21] alymurtazamemon
+please check the contest page everything is mentioned,
+
+
+[07/22/2023 18:21] alymurtazamemon
+for you
+
+
+[07/22/2023 19:47] 0xarshia
+Thanks sir.
+
+
+[07/22/2023 20:49] josephdara
+Hi @adamscochran, I sent a dm
+
+
+[07/22/2023 21:12] 0xdeo
+Can you please clarify the intended conversion rate of cvx/crv rewards to AMPH?
+
+
+[07/22/2023 21:25] adamscochran
+It’s on a diminishing curve per epoch. We only measure the CRV amount, and emit AMPH based on that. The amount per epoch declines pretty rapidly, and an epoch is based on how much total CRV has been collected by the protocol.
+
+(Pretty similar to how CVX emits in the Convex protocol)
+
+{Reactions}
+✅ 
+
+[07/22/2023 21:26] 0xdeo
+What's the formula?
+
+
+[07/22/2023 21:47] adamscochran
+It's the AmphClaimer.sol; and can be seen on the docs: https://amphora-protocol.gitbook.io/amphora-protocol/
+
+But it could be expressed as: =1+(((25000/(MAX(TotalAmph,50000000)/(8,000,000)))))-((TotalAmph/8,000,000)/50)
+
+{Embed}
+https://amphora-protocol.gitbook.io/amphora-protocol/
+🏺🏺Amphora Protocol🏺🏺
+Code4rena - ARCHIVE-Q3-2023 - amphora-jul21 [1131309270948904970].txt_Files/f8xPtDNnJGPzpmL2yjns-79921.png
+
+{Reactions}
+👍 
+
+[07/22/2023 21:49] 0xdeo
+Ah thanks. I was looking at the link to docs in the readme which didnt have that info
+
+{Reactions}
+👍 
+
+[07/22/2023 21:52] adamscochran
+Yeah just mentioned that to the code4rena team looks like its the incomplete autogen docs being linked to rather than the full one
+
+
+[07/23/2023 06:25] banditx0x
+Can you write a twitter thread for us
+
+
+[07/23/2023 10:30] josephdara
+Hi, Is this going to be live on mainnet only, or there are L2 deployments?
+
+
+[07/23/2023 10:54] 0xnevi
+https://discord.com/channels/810916927919620096/1131309270948904970/1132309475995430935
+
+
+[07/23/2023 11:51] 0xdanial
+Hey @adamscochran Dmed you
+
+
+[07/23/2023 18:18] 0xarshia
+hey @adamscochran  Dmed you.
+
+
+[07/23/2023 18:34] hisoul22
+This may be a dumb question, but what is an interest factor and how does it differ from an interest rate? @a
+
+
+[07/23/2023 18:34] hisoul22
+@adamscochran
+
+
+[07/23/2023 18:35] hisoul22
+any help would be much appreciated
+
+
+[07/23/2023 18:54] adamscochran
+A factor is an expression of a rate, but can be expressed in a different scale, which is useful when you’ve got changing conversion rates.
+
+
+[07/24/2023 04:40] hisoul22
+thanks
+
+
+[07/24/2023 07:36] 0xepley
+@adamscochran dm'ed you
+
+
+[07/24/2023 09:18] 0xcwalter
+@adamscochran just dmed you
+
+
+[07/24/2023 10:04] 0x3b
+@adamscochran  how big do you plan `_liquidationIncentive` to be? 5%- 10%?
+
+
+[07/24/2023 10:18] 0x3b
+This contest is quite dense and 2.4k solc is a little too much for 5 days, maybe we need an increase
+Arcade has 2k solc for 7 days BTW👀
+
+
+[07/24/2023 10:21] josephdara
+@adamscochran can you provide the sUSD address please. Or anyone else that has it
+
+
+[07/24/2023 10:41] arabadzhiev
+https://etherscan.io/token/0x57ab1ec28d129707052df4df418d58a2d46d5f51
+
+{Embed}
+https://etherscan.io/token/0x57ab1ec28d129707052df4df418d58a2d46d5f51
+Synth sUSD (sUSD) Token Tracker | Etherscan
+Synth sUSD (sUSD) Token Tracker on Etherscan shows the price of the Token $0.9975, total supply 43,884,427.460757895114526171, number of holders 14,903 and updated information of the token. The token tracker page also shows the analytics and historical data.
+
+
+[07/24/2023 11:01] josephdara
+Thanks
+
+
+[07/24/2023 11:17] adamscochran
+Fwiw that is the V2 and we aim to use the new V3 - shouldn’t make a difference but can get you the info when back at my computer
+
+{Reactions}
+👍 
+
+[07/24/2023 11:18] adamscochran
+Code4rena staff had mentioned the time as a reasonable minimum, but if this common feedback I’m happy to talk to them about it. I don’t want to do to little but also want to be fair to the fact that the contest has started already.
+
+{Reactions}
+❤️ (3) 
+
+[07/24/2023 14:13] minh___
+I personally prefer the 5 days
+
+
+[07/24/2023 14:39] proxy1967
+@adamscochran Why are you using `SafeERC20Upgradeable` in `depositERC20` in `Vault.sol` ?
+
+
+[07/24/2023 14:46] adamscochran
+Since we don't create the tokens - it's possible that some old tokens may not be fully compliant with ERC20 and so using the SafeERC20 wrapper is for ensuring that it has the proper formated return
+
+
+[07/24/2023 15:18] proxy1967
+Oh sorry I was asking more about why upgradeable?
+
+
+[07/24/2023 15:18] adamscochran
+Ah that part I'm unsure of, will ask the dev team and try and get back to you there
+
+{Reactions}
+👍 
+
+[07/24/2023 16:44] minh___
+is GovernorCharlie build from the ground up or is it forked from somewhere?
+
+
+[07/24/2023 16:48] mike_bello90
+5 days seem to little for me too
+
+
+[07/24/2023 17:48] 0xcwalter
+@adamscochran DMs
+
+
+[07/24/2023 18:59] 0xdeo
+What will the intialBorrowingFee be set to?
+
+
+[07/24/2023 20:40] infectedfuture
+Hi @adamscochran, DM'd you
+
+
+[07/25/2023 07:04] saksham0290
+@adamscochran Dm'd ser
+
+
+[07/25/2023 09:39] bauchibred
+Hi @adamscochran, sent a DM
+
+
+[07/25/2023 12:48] kawaicho
+On what chains are the smart contracts going to be deployed?
+
+
+[07/25/2023 13:35] adamscochran
+Ethereum mainnet
+
+
+[07/25/2023 15:57] 0xarshia
+@adamscochran  Hey can you please answer my question its been 2 days. did you got my massage? if not let me know and send it again.
+best
+
+{Reactions}
+👎 
+
+[07/25/2023 19:08] .qeew
+@adamscochran Dm
+
+
+[07/25/2023 20:49] 0xpathfindr
+@adamscochran Kindly accept my friend request
+
+
+[07/25/2023 21:45] unclejeff4407
+hey how much time.do we have left with this project?
+
+
+[07/25/2023 23:06] minh___
+21h according to current deadline
+
+
+[07/25/2023 23:07] unclejeff4407
+thanks
+
+
+[07/26/2023 05:18] 0xarshia
+Hey mr adam. You haven't answered my massages for 3 days. are you out of office? if not please asnwer questions.
+
+{Reactions}
+👎 
+
+[07/26/2023 05:19] 0x3b
+@adamscochran send a DM
+
+
+[07/26/2023 13:28] adamscochran
+Got a lot of DM questions and I’m answering any that are related to the protocol.
+
+But I am skipping questions that are extremely basic things like “where is this function used” or “how does this solidity thing work”
+
+Will double check for your specific question, but wanted to explain in general that the team isn’t taking time on super basic questions like that. Which may be better asked to peers here
+
+{Reactions}
+10_10 (6) 
+
+[07/26/2023 15:04] 0xarshia
+Well. we have worked with a lot of sponsors. they also got a lot of DMs you are not first one. the only target they have is helping in anything in order to make audit process faster. 
+cause we don't want to waste even some minutes to figure out simple things that you already know the answer. instead we want to focus on important parts. 
+fine i understand you are busy with Dms. but answering most of questions will help auditors to understand well in *fast period of time*  then why we need you we already have the codes  
+
+Sincerely.
+
+{Reactions}
+👍 👎 
+
+[07/26/2023 16:56] 0x3b
+you can always ask here in the chat...
+
+{Reactions}
+👍 (3) 
+
+[07/26/2023 17:08] minh___
+you dont want to waste minutes for understanding basic things, but somehow expect the sponsor to waste minutes explaining basic things
+
+{Reactions}
+this (2) 👆 
+
+[07/26/2023 17:10] 0xarshia
+Corrcet.
+
+{Reactions}
+👎 
+
+[07/26/2023 17:10] 0xarshia
+Time optimization is important for auditors.
+
+
+[07/26/2023 17:15] minh___
+right. and everyone else has unlimited time
+
+
+[07/26/2023 17:19] 0xarshia
+i dont think you got my point. quality of audit is much more important than these unimportant discuses. 
+ and sponsors 100% wants more quality audits.
+
+{Reactions}
+👎 
+
+[07/26/2023 17:20] 0xnevi
+Ser with all due respect i understand where the sponsor is coming from. Do your research before asking questions, its part of the job, and even makes u a better researcher. How are u gonna understand difficult parts without first understanding the simple parts?
+
+{Reactions}
+👍 (4) 
+
+[07/26/2023 17:21] 0xarshia
+.
+
+{Reactions}
+👎 
+
+[07/26/2023 17:21] 0xnevi
+And yea u can always ask the community here and not rely solely on sponsors im sure they’ll be happy to help for simpler stuff**
+
+{Reactions}
+👍 (4) 
+
+[07/26/2023 17:32] minh___
+I do, I just very much disagree with it. If you have a math issue and have a few math professors and 100 second graders who want to help you, would you answer everyones question?
+
+
+[07/26/2023 18:09] 0xdanial
+answering questions is not wasting time for sponsor, that's what sponsor is for. It's interesting that you don't even know @0xArshia 's question at all and say that he doesn't want to understand basic things.
+
+{Reactions}
+👎 
+
+[07/26/2023 18:12] minh___
+can you please look at the full context? those words are taken from his answer
+
+
+[07/26/2023 18:13] minh___
+and yes, answering questions **can** very well be a waste of time for the sponsor
+
+
+[07/26/2023 18:31] 0xdanial
+It's like saying auditing can be a waste of time for auditors 😂 sponsor is here to answer all questions. I agree that he could skip very basic questions, but your statement makes it sound like sponsor is doing us a favor by answering our questions
+
+{Reactions}
+👎 
+
+[07/26/2023 18:45] minh___
+so you are agreeing with me and the rest was interpretation, good 👍
+
+
+[07/26/2023 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺wardens The **Amphora Protocol** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the audit is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest-Admin if you have questions along the way!
+
+{Reactions}
+🎉 (11) ❤️ (5) ✅ (2) 
+
+[07/26/2023 20:02] saksham0290
+I agree with the part that why would a sponsor answer basic things , but I think If I'm having my protocol audited , this x amount of days for the audit would be the most crucial days for my protocol , so why not answer everything who knows it might help in finding a bug  , but I get both the arguments
+
+
+[07/26/2023 20:26] adamscochran
+His questions involved where a function was in the code (which could have been fixed with a control+F) and why the token had a transfer function, which can be summed up as… you need to transfer the token.
+
+
+[07/26/2023 20:31] maugzeth
+Agreed, if you are asking these types of questions auditing might not be for you... this just takes sponsors time away from the important and blocking questions.
+
+
+[08/08/2023 05:29] bytes032
+434
+
+
+[08/08/2023 23:41] unclejeff4407
+and how many judges are working on them?
+
+
+[08/18/2023 21:10] liveactionllamac4
+🤑 🎉  Awards for **Amphora Protocol**:
+
+$12,017.95 USDC » @minhtrng 
+$8,482.66 USDC » @said 
+$5,793.58 USDC » @0xComfyCat 
+$5,702.21 USDC » @ljmanini 
+$5,087.72 USDC » @SanketKogekar 
+$3,954.29 USDC » @emerald7017 
+$3,919.42 USDC » @ak1 
+$793.19 USDC » @K42 Ψ 
+$774.71 USDC » @0xSmartContract 
+$732.44 USDC » Musaka (@0x3b & @ZdravkoHr)
+$527.07 USDC » @Limbooo 
+$490.52 USDC » @David Giladi 
+$275.55 USDC » @dharma09 
+$214.80 USDC » @kutu 
+$214.80 USDC » @Bauchibred 
+$156.35 USDC » @giovannidisiena 
+$124.49 USDC » @Rolezn 
+$124.49 USDC » @alymurtazamemon 
+$124.49 USDC » @hunter_w3b 
+$122.45 USDC » @0xWaitress 
+$122.45 USDC » @erebus 
+$122.45 USDC » @qpzm 
+$113.02 USDC » 0xbranded
+$113.02 USDC » @auditism 
+$113.02 USDC » @SpicyMeatball 
+$113.02 USDC » @pep7siup 
+$113.02 USDC » @mert_eren. 
+$100.80 USDC » @Qeew 
+$65.94 USDC » @adeolu 
+$65.94 USDC » @josephdara 
+$32.14 USDC » @SM3_SS 
+$32.14 USDC » @naman1778 
+$22.71 USDC » @eeshenggoh 
+$22.71 USDC » @piyushshukla599 
+$22.71 USDC » @excalibor 
+$22.71 USDC » @Raihan 
+$22.71 USDC » @ReyAdmirado 
+$22.71 USDC » @ybansal2403 
+$22.71 USDC » @SY_S 
+$22.71 USDC » @code-cipher 
+$22.71 USDC » @LéoS 
+$22.71 USDC » @SAQ 
+$9.43 USDC » @Hama 
+$9.43 USDC » @VIELITE 
+$9.43 USDC » @debo 
+$9.43 USDC » uzay
+$9.43 USDC » @nnez 
+$9.43 USDC » @8olidity 
+$9.43 USDC » @btk 
+$9.43 USDC » @Walter 
+$9.43 USDC » @T1MOH 
+$9.43 USDC » @grearlake 
+$9.43 USDC » @Brenzee 
+$9.43 USDC » @PNS 
+$9.43 USDC » @SAAJ 
+$9.43 USDC » @sivanesh_808 
+$9.43 USDC » @deth 
+$9.43 USDC » @uncle jeff 
+$9.43 USDC » @0xmuxyz 
+$9.43 USDC » @0xpathfindr 
+$9.43 USDC » @blackhole 
+$9.43 USDC » @ro1sharkm 
+$9.43 USDC » @mojito_auditor 
+$9.43 USDC » @Topmark 
+$9.43 USDC » @eeyore 
+$9.43 USDC » @No12Samurai 
+$9.43 USDC » @Deekshith99 
+$9.43 USDC » @Arabadzhiev 
+$9.43 USDC » @sakshamguruji 
+$9.43 USDC » @Kaysoft 
+$9.43 USDC » @MohammedRizwan 
+$9.43 USDC » @gkrastenov 
+
+🏁 Findings summary
+--------------------------------------—
+High risk findings: 3 unique (25 total)
+Med risk findings: 3 unique (4 total)
+Gas reports: 18 (Best: DavidGiladi)
+QA reports: 51 (Best: DavidGiladi)
+Advanced analysis reports: 7 (Best: 0xSmartContract)
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+❤️ (8) 🚀 (6) 🙏 (5) 🔥 (6) 4739_Skeletor (6) 10_10 (6) letsgo (2) 👏 (3) chefskiss (2) hearteyesrobot (2) 💯 (2) 
+
+[08/19/2023 03:04] hama09072
+@🦙 liveactionllama | C4 - AWAY Is there an error or is it normal that a high and a low bugs on this contest gets paid just 9 dollars?
+
+
+[08/19/2023 03:42] mike_bello90
+guys, how can I know what was the problem with my findings? cause I send some findings and I didn't get anything 🥲
+
+
+[08/19/2023 07:16] topmark1
+backstage I guess
+
+
+[08/19/2023 08:25] nethoxa
+I guess it was duplicated as fuck and got diluted with all the subm
+
+
+[08/19/2023 09:07] thekmj
+There was a contest where 2H and 1M got less than $1
+
+
+[08/19/2023 09:08] thekmj
+50-60 dupes on said finding, one can imagine 0.9^50 on this
+
+
+[08/19/2023 15:24] piyushshukla599
+Summited 2 bugs . Due to time problem ..but only 1 bug accepted.  I'm not understand why 2nd bug rejected
+
+
+[08/19/2023 15:24] piyushshukla599
+@🦙 liveactionllama | C4 - AWAY
+
+
+[08/19/2023 20:39] mike_bello90
+yeah me too I would like to know why the bug were rejected!
+
+{Reactions}
+👍 
+
+[08/20/2023 10:27] mrosas
+When is will the report be out?
+
+
+[08/20/2023 14:26] wahedtalash77
+Same issue
+
+
+[08/20/2023 14:37] 0x11singh99
+c4 should make some mechenism for feedback and discussion,
+
+
+[08/20/2023 15:06] 0xeeyore
+it's called backstage
+
+{Reactions}
+😄 
+
+[08/20/2023 15:08] 0x11singh99
+ohh auditors can discuss in github issues,during judging??  i was thinking only judges and sponsors can discuss
+
+
+[08/20/2023 17:35] 0xstalin
+Not during judging, unless the judge or sponsors asks you to do it. 
+Warden’s comments are allowed until the QA phase
+
+{Reactions}
+🚀 
+
+[08/20/2023 18:12] phoenixv110
+I submitted a QA report. But my dashboard says 0 audits. Did my report got rejected or something?
+
+
+[08/20/2023 18:48] 0xstalin
+it was either rejected or it didn't meet the criteria of a Grade-A report, I believe only Grade-A QA reports are awarded (but I may be wrong)
+
+{Reactions}
+🫡 
+
+[08/20/2023 19:42] mike_bello90
+how can I access that?
+
+
+[08/20/2023 20:12] ihtishamsudo
+Grade-A + Grade-B get rewarded *
+
+
+[08/21/2023 01:58] zhaojie
+I submitted a lot of reports, the fifth project received an award. Now when I find a problem, I write test code to verify it.
+
+
+[08/31/2023 03:10] halitus.eth
+@0xleastwood please check DM
+
+
+[12/18/2023 09:40] infectedfuture
+Wen report ?
+
+{Reactions}
+😂 
+
+[02/29/2024 17:25] itsmetechjay
+ℹ️ This channel is pending archive.  As a result, any private threads will be permanently deleted on Friday, 08 March 2024. Please make sure to grab anything you might need from those before then.
+
+
+[03/07/2024 14:33] itsmetechjay
+ℹ️ Reminder: this channel will be deleted in 24 hours.
+
+
+==============================================================
+Exported 136 message(s)
+==============================================================
